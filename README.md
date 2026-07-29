@@ -1,4 +1,4 @@
-# jiagar.dev
+# Agar.Labs
 
 Portafolio de Joaquín Agar — comunicador creativo, community manager y desarrollador web. Sitio construido con React + Vite, con un formulario de contacto respaldado por un backend serverless.
 
