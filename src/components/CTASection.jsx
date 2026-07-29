@@ -57,9 +57,7 @@ export default function CTASection() {
           <span className="text-neon">próximo proyecto?</span>
         </h2>
 
-        <p className="mt-6 max-w-2xl text-lg text-muted md:text-xl">
-          Hablemos. Respuesta en menos de 2 horas en horario laboral.
-        </p>
+        <p className="mt-6 max-w-2xl text-lg text-muted md:text-xl">Hablemos.</p>
 
         <form
           onSubmit={handleSubmit}
@@ -90,7 +88,8 @@ export default function CTASection() {
         </form>
 
         <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          Usaremos tu correo para responderte y, ocasionalmente, enviarte novedades.
+          Usaremos tu correo para responderte y, ocasionalmente, enviarte novedades. Puedes
+          darte de baja cuando quieras.
         </p>
 
         {sent && !usedFallback && (

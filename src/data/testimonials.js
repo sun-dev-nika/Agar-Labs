@@ -1,8 +1,8 @@
 export const testimonials = [
   {
     quote: 'Justo lo que necesitaba. Rápido y de calidad. La landing salió en menos tiempo del prometido.',
-    name: 'María L.',
-    role: 'Fundadora · E-commerce',
+    name: 'Macarena G.',
+    role: 'Directora de Operaciones y Finanzas · AP Ecology',
     initial: 'M',
   },
   {
@@ -13,8 +13,8 @@ export const testimonials = [
   },
   {
     quote: 'Excelente precio-calidad. Lo recomiendo a cualquiera que necesite resolver bien y rápido.',
-    name: 'Ana S.',
-    role: 'Marketing Manager',
-    initial: 'A',
+    name: 'Paula P.',
+    role: 'Fundadora · AP Ecology',
+    initial: 'P',
   },
 ]
