@@ -12,7 +12,7 @@ const SKILLS = [
 
 export default function AboutMe() {
   return (
-    <section id="sobre-mi" className="border-t border-border py-20 md:py-28">
+    <section id="sobre-mi" className="section-y">
       <div className="container-x">
         <p className="section-label mb-4">06 — SOBRE MÍ</p>
         <h2 className="mb-10 font-display text-3xl font-bold uppercase leading-tight md:text-5xl">
@@ -39,10 +39,7 @@ export default function AboutMe() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {SKILLS.map((skill) => (
-                <span
-                  key={skill}
-                  className="inline-block rounded-full border border-border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/70"
-                >
+                <span key={skill} className="chip">
                   {skill}
                 </span>
               ))}

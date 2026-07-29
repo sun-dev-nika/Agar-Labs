@@ -68,7 +68,7 @@ export default function PortfolioLinkCard({
   return (
     <Tag
       {...linkProps}
-      className={`group relative flex h-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 ${
+      className={`card group relative flex h-full overflow-hidden ${
         href ? 'hover:-translate-y-1 hover:border-neon hover:bg-neon/[0.04]' : ''
       } ${layout === 'wide' ? 'flex-col md:flex-row' : 'flex-col'}`}
     >

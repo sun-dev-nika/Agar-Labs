@@ -1,29 +1,10 @@
 import { ArrowRight } from 'lucide-react'
+import HeroBackdrop from './HeroBackdrop.jsx'
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.18]"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 85% 30%, rgba(212,255,0,0.18), transparent 45%), radial-gradient(circle at 15% 80%, rgba(0,212,255,0.12), transparent 45%)',
-        }}
-      />
-
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" strokeWidth="0.5" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </svg>
+      <HeroBackdrop patternId="grid" />
 
       <div className="container-x relative flex min-h-[80vh] flex-col justify-center py-20 md:py-28">
         <p className="section-label mb-6">VISUALS · CÓDIGO · IA</p>

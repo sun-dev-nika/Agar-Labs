@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Menu, X, MessageCircle } from 'lucide-react'
 import { WHATSAPP_URL } from '../lib/contact.js'
+import useNavLinks from '../hooks/useNavLinks.js'
+import Logo from './Logo.jsx'
 
 const HOME_LINKS = [
   { hash: '#services', label: 'Servicios' },
@@ -19,33 +21,23 @@ const PORTFOLIO_LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-  const { pathname } = useLocation()
-  const onPortfolio = pathname === '/portafolio'
-  const navLinks = onPortfolio ? PORTFOLIO_LINKS : HOME_LINKS
-  const resolveHref = (hash) => (onPortfolio ? `/portafolio${hash}` : hash)
-  const crossLink = onPortfolio
-    ? { href: '/', label: 'Inicio' }
-    : { href: '/portafolio', label: 'Portafolio' }
-
-  const Logo = (
-    <span className="font-display text-2xl font-bold tracking-tight">
-      <span className="bg-gradient-to-r from-cyan to-blue-500 bg-clip-text text-transparent">
-        AGAR
-      </span>
-      <span className="ml-1 text-white/60">/Labs</span>
-    </span>
-  )
+  const { onPortfolio, navLinks, resolveHref, crossLink } = useNavLinks({
+    homeLinks: HOME_LINKS,
+    portfolioLinks: PORTFOLIO_LINKS,
+    crossLinkToHome: { href: '/', label: 'Inicio' },
+    crossLinkToPortfolio: { href: '/portafolio', label: 'Portafolio' },
+  })
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
       <div className="container-x flex h-16 items-center justify-between md:h-20">
         {onPortfolio ? (
           <Link to="/" className="flex items-center gap-2">
-            {Logo}
+            <Logo />
           </Link>
         ) : (
           <a href="#top" className="flex items-center gap-2">
-            {Logo}
+            <Logo />
           </a>
         )}
 

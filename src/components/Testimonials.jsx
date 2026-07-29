@@ -3,7 +3,7 @@ import { testimonials } from '../data/testimonials.js'
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="border-t border-border py-20 md:py-28">
+    <section id="testimonials" className="section-y">
       <div className="container-x">
         <p className="section-label mb-6">TESTIMONIOS</p>
         <h2 className="max-w-3xl font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight md:text-5xl">

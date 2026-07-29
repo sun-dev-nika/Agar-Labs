@@ -23,7 +23,7 @@ export default function Portfolio() {
       <WebProjects />
       <StrategyCases />
 
-      <section id="foto" className="border-t border-border py-20 md:py-28">
+      <section id="foto" className="section-y">
         <div className="container-x">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <div>

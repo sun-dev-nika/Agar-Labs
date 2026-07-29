@@ -1,6 +1,8 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Linkedin, Instagram, Mail } from 'lucide-react'
 import { EMAIL } from '../lib/contact.js'
+import useNavLinks from '../hooks/useNavLinks.js'
+import Logo from './Logo.jsx'
 
 const SOCIALS = [
   {
@@ -28,24 +30,20 @@ const PORTFOLIO_LINKS = [
 
 export default function Footer() {
   const year = new Date().getFullYear()
-  const { pathname } = useLocation()
-  const onPortfolio = pathname === '/portafolio'
-  const navLinks = onPortfolio ? PORTFOLIO_LINKS : HOME_LINKS
-  const resolveHref = (hash) => (onPortfolio ? `/portafolio${hash}` : hash)
-  const crossLink = onPortfolio
-    ? { href: '/', label: 'Inicio (Servicios)' }
-    : { href: '/portafolio', label: 'Portafolio' }
+  const { navLinks, resolveHref, crossLink } = useNavLinks({
+    homeLinks: HOME_LINKS,
+    portfolioLinks: PORTFOLIO_LINKS,
+    crossLinkToHome: { href: '/', label: 'Inicio (Servicios)' },
+    crossLinkToPortfolio: { href: '/portafolio', label: 'Portafolio' },
+  })
 
   return (
     <footer className="border-t border-border bg-surface">
       <div className="container-x py-14 md:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div>
-            <p className="font-display text-2xl font-bold tracking-tight">
-              <span className="bg-gradient-to-r from-cyan to-blue-500 bg-clip-text text-transparent">
-                AGAR
-              </span>
-              <span className="ml-1 text-white/60">/Labs</span>
+            <p>
+              <Logo />
             </p>
             <p className="mt-4 max-w-xs text-sm text-muted">
               Páginas web, automatizaciones y orden de tus datos con IA.

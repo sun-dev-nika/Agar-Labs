@@ -1,8 +1,9 @@
 import { pricing } from '../data/pricing.js'
+import PromoBadge from './PromoBadge.jsx'
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="border-t border-border py-20 md:py-28">
+    <section id="pricing" className="section-y">
       <div className="container-x">
         <p className="section-label mb-6">PRECIOS</p>
         <h2 className="max-w-3xl font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight md:text-6xl">
@@ -45,11 +46,7 @@ export default function Pricing() {
                       <span className="font-display text-lg font-bold text-neon md:text-xl">
                         {row.from}
                       </span>
-                      {row.promo && (
-                        <span className="rounded-full border border-neon/40 bg-neon/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.15em] text-neon">
-                          Promo
-                        </span>
-                      )}
+                      {row.promo && <PromoBadge />}
                     </div>
                   </td>
                   <td className="hidden px-4 py-5 font-mono text-sm text-muted sm:table-cell md:px-8">

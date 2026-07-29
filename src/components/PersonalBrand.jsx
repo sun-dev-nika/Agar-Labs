@@ -6,7 +6,7 @@ const BRAND_STATS = [
 
 export default function PersonalBrand() {
   return (
-    <section id="marca" className="border-t border-border py-20 md:py-28">
+    <section id="marca" className="section-y">
       <div className="container-x">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>

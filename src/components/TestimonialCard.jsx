@@ -2,7 +2,7 @@ import { Star } from 'lucide-react'
 
 export default function TestimonialCard({ quote, name, role, initial }) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-neon/40 hover:bg-neon/[0.03]">
+    <article className="card flex h-full flex-col p-8 hover:border-neon/40 hover:bg-neon/[0.03]">
       <div className="flex gap-1 text-neon">
         {[0, 1, 2, 3, 4].map((i) => (
           <Star key={i} size={16} fill="currentColor" strokeWidth={0} />

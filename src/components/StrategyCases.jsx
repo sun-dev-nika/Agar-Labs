@@ -3,7 +3,7 @@ import { strategyCases } from '../data/strategyCases.js'
 
 export default function StrategyCases() {
   return (
-    <section id="estrategia" className="border-t border-border py-20 md:py-28">
+    <section id="estrategia" className="section-y">
       <div className="container-x">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>

@@ -45,4 +45,16 @@ body {
   .section-label::before {
     content: '—';
   }
+
+  .section-y {
+    @apply border-t border-border py-20 md:py-28;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-surface transition-all duration-300;
+  }
+
+  .chip {
+    @apply inline-block rounded-full border border-border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/70;
+  }
 }

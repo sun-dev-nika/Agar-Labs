@@ -1,37 +1,52 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { EMAIL, WHATSAPP_URL } from '../lib/contact.js'
+import CTABackdrop from './CTABackdrop.jsx'
+
+function openMailtoFallback(trimmedEmail) {
+  const subject = encodeURIComponent('Cotización proyecto AGAR/Labs')
+  const body = encodeURIComponent(
+    `Hola Joaquín,\n\nMe interesa cotizar un proyecto.\nMi correo: ${trimmedEmail}\n\nCuéntame:`
+  )
+  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`
+}
 
 export default function CTASection() {
   const [email, setEmail] = useState('')
+  const [company, setCompany] = useState('')
+  const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
+  const [usedFallback, setUsedFallback] = useState(false)
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     const trimmed = email.trim()
     if (!trimmed) return
-    const subject = encodeURIComponent('Cotización proyecto AGAR/Labs')
-    const body = encodeURIComponent(
-      `Hola Joaquín,\n\nMe interesa cotizar un proyecto.\nMi correo: ${trimmed}\n\nCuéntame:`
-    )
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`
+
+    setSending(true)
+    let failed = false
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: trimmed, company }),
+      })
+      failed = !response.ok
+    } catch {
+      failed = true
+    }
+
+    if (failed) {
+      openMailtoFallback(trimmed)
+      setUsedFallback(true)
+    }
+    setSending(false)
     setSent(true)
   }
 
   return (
     <section id="cta" className="relative border-t border-border py-20 md:py-32">
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon to-transparent"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 80% 50%, rgba(212,255,0,0.15), transparent 50%)',
-        }}
-      />
+      <CTABackdrop />
 
       <div className="container-x relative">
         <p className="section-label mb-6">EMPECEMOS</p>
@@ -59,17 +74,48 @@ export default function CTASection() {
             className="flex-1 rounded-full bg-transparent px-5 py-3 text-base text-white placeholder:text-muted focus:outline-none"
             aria-label="Tu correo electrónico"
           />
-          <button type="submit" className="btn-neon">
-            Quiero cotizar
+          <input
+            type="text"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
+          <button type="submit" className="btn-neon" disabled={sending}>
+            {sending ? 'Enviando...' : 'Quiero cotizar'}
             <ArrowRight size={18} strokeWidth={2.5} />
           </button>
         </form>
 
         <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-          Sin spam. Solo contacto directo.
+          Usaremos tu correo para responderte y, ocasionalmente, enviarte novedades.
         </p>
 
-        {sent && (
+        {sent && !usedFallback && (
+          <p className="mt-4 max-w-2xl text-sm text-muted">
+            ¡Listo! Recibimos tu correo y te contactaremos pronto. Si prefieres adelantarte,{' '}
+            <a
+              href={`mailto:${EMAIL}`}
+              className="text-neon underline underline-offset-2 hover:text-cyan"
+            >
+              escríbenos directo a {EMAIL}
+            </a>{' '}
+            o{' '}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neon underline underline-offset-2 hover:text-cyan"
+            >
+              contáctanos por WhatsApp
+            </a>
+            .
+          </p>
+        )}
+
+        {sent && usedFallback && (
           <p className="mt-4 max-w-2xl text-sm text-muted">
             Se abrió tu cliente de correo. Si no pasó nada,{' '}
             <a

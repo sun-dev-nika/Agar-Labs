@@ -1,3 +1,5 @@
+import HeroBackdrop from './HeroBackdrop.jsx'
+
 const STATS = [
   { n: '5.266', l: 'Seguidores orgánicos' },
   { n: '273.962', l: 'Visualizaciones / 30 días' },
@@ -5,29 +7,19 @@ const STATS = [
   { n: 'C2', l: 'Inglés certificado EF SET' },
 ]
 
+// Border per cell for a fixed 2x2 (mobile) / 1x4 (desktop) grid — index-based
+// since Tailwind's divide-x/divide-y utilities don't follow 2D grid position.
+const STAT_BORDER_CLASSES = [
+  '', // 0: top-left, no border
+  'border-l border-border md:border-l md:border-border', // 1: same row (mobile), col 2 (desktop)
+  'border-t border-border md:border-t-0 md:border-l', // 2: new row (mobile), col 3 (desktop)
+  'border-t border-l border-border md:border-t-0', // 3: new row (mobile), col 4 (desktop)
+]
+
 export default function PortfolioHero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.18]"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 85% 30%, rgba(212,255,0,0.18), transparent 45%), radial-gradient(circle at 15% 80%, rgba(0,212,255,0.12), transparent 45%)',
-        }}
-      />
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <pattern id="grid-portfolio" width="48" height="48" patternUnits="userSpaceOnUse">
-            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" strokeWidth="0.5" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid-portfolio)" />
-      </svg>
+      <HeroBackdrop patternId="grid-portfolio" />
 
       <div className="container-x relative py-20 md:py-28">
         <p className="section-label mb-6">COMMUNITY MANAGER · PUBLICISTA · VALPARAÍSO, CHILE</p>
@@ -57,20 +49,12 @@ export default function PortfolioHero() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-border bg-surface md:grid-cols-4">
-          {STATS.map((stat, i) => {
-            const borderClasses = [
-              '', // 0: top-left, no border
-              'border-l border-border md:border-l md:border-border', // 1: same row (mobile), col 2 (desktop)
-              'border-t border-border md:border-t-0 md:border-l', // 2: new row (mobile), col 3 (desktop)
-              'border-t border-l border-border md:border-t-0', // 3: new row (mobile), col 4 (desktop)
-            ][i]
-            return (
-              <div key={stat.l} className={`p-6 md:p-8 ${borderClasses}`}>
-                <div className="font-display text-2xl font-bold text-neon md:text-3xl">{stat.n}</div>
-                <div className="mt-1 text-xs text-muted">{stat.l}</div>
-              </div>
-            )
-          })}
+          {STATS.map((stat, i) => (
+            <div key={stat.l} className={`p-6 md:p-8 ${STAT_BORDER_CLASSES[i]}`}>
+              <div className="font-display text-2xl font-bold text-neon md:text-3xl">{stat.n}</div>
+              <div className="mt-1 text-xs text-muted">{stat.l}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

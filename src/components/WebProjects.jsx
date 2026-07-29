@@ -3,7 +3,7 @@ import { webProjects } from '../data/webProjects.js'
 
 export default function WebProjects() {
   return (
-    <section id="web" className="border-t border-border py-20 md:py-28">
+    <section id="web" className="section-y">
       <div className="container-x">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -18,17 +18,15 @@ export default function WebProjects() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {webProjects.map((project) =>
-            project.id === 'ap-ecology' ? (
-              <PortfolioLinkCard key={project.id} {...project}>
+          {webProjects.map((project) => (
+            <PortfolioLinkCard key={project.id} {...project}>
+              {project.id === 'ap-ecology' && (
                 <span className="font-display text-4xl tracking-tight" style={{ color: '#8bbf3f' }}>
                   AP<span style={{ color: '#c9d94a' }}>ecology</span>
                 </span>
-              </PortfolioLinkCard>
-            ) : (
-              <PortfolioLinkCard key={project.id} {...project} />
-            )
-          )}
+              )}
+            </PortfolioLinkCard>
+          ))}
         </div>
       </div>
     </section>

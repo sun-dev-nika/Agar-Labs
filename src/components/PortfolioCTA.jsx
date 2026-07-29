@@ -1,21 +1,11 @@
 import { Mail, MessageCircle } from 'lucide-react'
 import { EMAIL, WHATSAPP_URL } from '../lib/contact.js'
+import CTABackdrop from './CTABackdrop.jsx'
 
 export default function PortfolioCTA() {
   return (
     <section id="contacto" className="relative border-t border-border py-20 md:py-32">
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon to-transparent"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 80% 50%, rgba(212,255,0,0.15), transparent 50%)',
-        }}
-      />
+      <CTABackdrop />
 
       <div className="container-x relative">
         <h2 className="max-w-4xl font-display text-5xl font-bold uppercase leading-[1.02] tracking-tight md:text-7xl">
