@@ -7,9 +7,7 @@ export default function Pricing() {
       <div className="container-x">
         <p className="section-label mb-6">PRECIOS</p>
         <h2 className="max-w-3xl font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight md:text-6xl">
-          Tabla simple,
-          <br />
-          sin sorpresas
+          Precios
         </h2>
 
         <div className="mt-14 overflow-hidden rounded-2xl border border-border">

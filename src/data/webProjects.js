@@ -28,4 +28,37 @@ export const webProjects = [
     external: true,
     footLabel: 'Ver sitio en vivo',
   },
+  {
+    id: 'grupo-verde',
+    tag: 'Cliente real',
+    tagVariant: 'accent',
+    title: 'Grupo Verde',
+    description:
+      'Sitio institucional para empresa de soluciones sostenibles en manejo de residuos, diseño y construcción de espacios ecoamigables. Frontend estático en HTML, CSS y JavaScript, sin build ni dependencias.',
+    image: {
+      src: '/portfolio/web_grupoverde.png',
+      alt: 'Vista previa del sitio Grupo Verde Chile',
+      width: 1400,
+      height: 720,
+    },
+    href: 'https://www.grupoverdechile.cl',
+    external: true,
+    footLabel: 'Ver sitio en vivo',
+  },
+  {
+    id: 'bencina-ruta',
+    tag: 'App',
+    title: 'Bencina en Ruta',
+    description:
+      'App propia (Vite + Leaflet, sin backend) que calcula dónde cargar combustible más barato a lo largo de una ruta A→B en Chile, usando los precios abiertos de la CNE y ruteo con OSRM.',
+    image: {
+      src: '/portfolio/web_bencina.jpg',
+      alt: 'Vista previa de la app Bencina en Ruta',
+      width: 1280,
+      height: 800,
+    },
+    href: 'https://bencina-ruta.vercel.app',
+    external: true,
+    footLabel: 'Abrir app',
+  },
 ]

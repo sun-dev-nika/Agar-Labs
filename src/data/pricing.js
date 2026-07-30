@@ -5,7 +5,7 @@ const TIME_BY_SERVICE = [
   { label: 'Backend (API / Base de datos)', time: '2–4 semanas' },
   { label: 'Fullstack (Front + Back)', time: '4–8+ semanas' },
   { label: 'Migración de hosting', time: '1–2 semanas' },
-  { label: 'Orden de Caja', time: '1–2 semanas' },
+  { label: 'Análisis de Datos', time: '1–2 semanas' },
   { label: 'Automatización de procesos', time: '1–2 semanas' },
 ]
 

@@ -6,6 +6,7 @@ const SKILLS = [
   'CALENDARIOS EDITORIALES',
   'META BUSINESS SUITE',
   'IA GENERATIVA',
+  'HIGGSFIELD',
   'HTML / CSS / JS',
   'FOTOGRAFÍA PROFESIONAL',
 ]
@@ -28,14 +29,21 @@ export default function AboutMe() {
 
           <div>
             <p className="text-sm text-muted md:text-base">
-              Combino storytelling y producción audiovisual (CapCut, Vegas Pro) con herramientas
-              de IA generativa para crear contenido que convierte. Trabajo bilingüe
-              español–inglés (C2 certificado), acostumbrado a la presión y a los entornos
-              multiculturales.
+              Como FullStack Product Engineer, no me limito a recibir instrucciones de código:
+              diseño, desarrollo y despliego productos completos —de punta a punta— combinando
+              ejecución técnica con visión de negocio y empatía por el cliente. Construí sitios
+              institucionales reales (IGV Residuos, AP Ecology, Grupo Verde) y aplicaciones
+              propias como Bencina en Ruta, apoyándome en agentes de IA para moverme más rápido
+              sin sacrificar calidad.
             </p>
             <p className="mt-4 text-sm text-muted md:text-base">
-              Mi diferencial: no solo gestiono la comunidad, también construyo las piezas —fotos,
-              video, sitios web— que la alimentan.
+              Como publicista, combino storytelling y producción audiovisual (CapCut, Vegas Pro)
+              con herramientas de IA generativa —Higgsfield y modelos como Seedance, Nano
+              Banana, GPT Image, Kling Motion Control y Seedream— para crear contenido que
+              convierte. Trabajo bilingüe español–inglés (C2 certificado), con experiencia en
+              entornos multiculturales. Mi diferencial: no solo gestiono la comunidad, también
+              construyo las piezas —fotos, video, sitios web y apps— que la alimentan. Antes de
+              esto, trabajé como fotógrafo para Norwegian Cruise Lines.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {SKILLS.map((skill) => (

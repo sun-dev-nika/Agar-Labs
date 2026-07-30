@@ -8,15 +8,15 @@ export const services = [
       { label: 'Frontend (UI / Landing)', price: '$150.000' },
       { label: 'Backend (API / Base de datos)', price: '$300.000', promo: true },
       { label: 'Fullstack (Front + Back)', price: '$400.000', promo: true },
-      { label: 'Migración de hosting', price: '$100.000–$600.000' },
+      { label: 'Migración de hosting', price: '$50.000–$600.000' },
     ],
     tags: ['React', 'Node', 'Tailwind', '48h – 8 semanas'],
   },
   {
     number: '02',
-    title: 'Orden de Caja',
+    title: 'Análisis de Datos',
     description: 'Limpio → organizo → creo tablas dinámicas',
-    bullets: [{ label: 'Orden de Caja', price: '$50.000', promo: true }],
+    bullets: [{ label: 'Análisis de Datos', price: '$50.000', promo: true }],
     tags: ['Claude', 'Excel Avanzado', 'MySQL', '1-2 semanas'],
   },
   {
