@@ -8,7 +8,7 @@ import CTASection from '../components/CTASection.jsx'
 
 export default function Home() {
   useDocumentTitle(
-    'AGAR/Labs — Desarrollo Web Fullstack + IA',
+    'AGAR/Labs — FullStack Product Engineer + IA',
     'Desarrollador full stack y consultor IA. Landing pages en 48h, automatizaciones y orden de tus datos con IA. Respuesta en menos de 2 horas.',
     '/'
   )

@@ -10,14 +10,14 @@ export default function Hero() {
         <p className="section-label mb-6">VISUALS · CÓDIGO · IA</p>
 
         <h1 className="max-w-5xl font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
-          Desarrollo Web
+          FullStack
           <br />
-          Fullstack <span className="text-neon">+ IA</span>
+          Product Engineer <span className="text-neon">+ IA</span>
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
-          Páginas web (frontend, backend o fullstack) y análisis de datos con IA.
-          Respuesta en menos de 2 horas.
+          Recibo instrucciones de código y ejecuto agentes de IA con la visión de negocio y
+          la empatía con el cliente.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
