@@ -9,7 +9,7 @@ export default function ServiceCard({ number, title, description, bullets, tags 
         </span>
       </div>
 
-      <h3 className="mt-6 font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
+      <h3 className="mt-6 break-words font-display text-2xl font-bold uppercase leading-tight md:text-3xl xl:text-4xl">
         {title}
       </h3>
 
