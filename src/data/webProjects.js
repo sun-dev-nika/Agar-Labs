@@ -5,7 +5,7 @@ export const webProjects = [
     tagVariant: 'accent',
     title: 'IGV Residuos',
     description:
-      'Sitio institucional completo para empresa de gestión de residuos: servicios, materiales valorizables, proceso operativo y trazabilidad. Desarrollado de punta a punta.',
+      'Sitio institucional para empresa de gestión de residuos, construido en HTML, CSS y JavaScript. El contenido de puntos limpios y aliados lo edita el cliente en Google Sheets, publicado como CSV y consumido en vivo, con respaldo local si falla la conexión.',
     image: {
       src: '/portfolio/web_igv.jpg',
       alt: 'Vista previa del sitio IGV Residuos',
