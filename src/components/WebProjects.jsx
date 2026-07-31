@@ -25,6 +25,11 @@ export default function WebProjects() {
                   AP<span style={{ color: '#c9d94a' }}>ecology</span>
                 </span>
               )}
+              {project.id === 'pdf-on-rails' && (
+                <span className="font-display text-4xl tracking-tight text-white">
+                  <span style={{ color: '#cc0000' }}>PDF</span> on Rails
+                </span>
+              )}
             </PortfolioLinkCard>
           ))}
         </div>

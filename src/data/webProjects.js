@@ -61,4 +61,17 @@ export const webProjects = [
     external: true,
     footLabel: 'Abrir app',
   },
+  {
+    id: 'pdf-on-rails',
+    tag: 'App',
+    title: 'Pdf On Rails',
+    description:
+      'Toolkit de PDF sin registro (unir, dividir, rotar, comprimir, convertir, OCR y más) construido en Ruby on Rails 8.1 + Hotwire, con PostgreSQL y jobs asíncronos en Solid Queue. Self-hosted con Docker + Kamal.',
+    image: null,
+    href: 'https://github.com/sun-dev-nika/pdf-on-rails',
+    external: true,
+    footLabel: 'Ver código en GitHub',
+    footNote:
+      'Self-hosted vía Docker + Kamal, expuesto por Cloudflare Tunnel — sin dominio fijo, por eso el link va al código.',
+  },
 ]
