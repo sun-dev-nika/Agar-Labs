@@ -11,11 +11,7 @@ const TIME_BY_SERVICE = [
 
 const allBullets = services.flatMap((service) => service.bullets)
 
-function lowerBound(range) {
-  return range.split('–')[0].trim()
-}
-
 export const pricing = TIME_BY_SERVICE.map(({ label, time }) => {
   const bullet = allBullets.find((b) => b.label === label)
-  return { service: label, from: lowerBound(bullet.price), time, promo: bullet.promo === true }
+  return { service: label, from: bullet.price, time, promo: bullet.promo === true }
 })

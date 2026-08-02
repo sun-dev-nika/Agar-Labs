@@ -22,7 +22,7 @@ export default function PortfolioHero() {
       <HeroBackdrop patternId="grid-portfolio" />
 
       <div className="container-x relative py-20 md:py-28">
-        <p className="section-label mb-6">COMMUNITY MANAGER · PUBLICISTA · VALPARAÍSO, CHILE</p>
+        <p className="section-label mb-6">PUBLICISTA · UX/UI · PRODUCT ENGINEER · VALPARAÍSO, CHILE</p>
 
         <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
           Creo contenido
@@ -31,9 +31,10 @@ export default function PortfolioHero() {
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
-          Comunicador creativo con experiencia comprobable en gestión de redes, contenido
-          orgánico y construcción de audiencias. Storytelling, producción audiovisual y
-          desarrollo web bajo el mismo techo.
+          Publicista con asertividad en diseño UX/UI y visión de product engineer: no solo
+          pienso la estrategia de contenido, también diseño, desarrollo y despliego el
+          producto digital que la sostiene — apoyado en mi propio harness de 3 agentes de IA
+          (leader, implementer, reviewer) para moverme rápido sin perder calidad.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-2">

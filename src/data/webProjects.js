@@ -74,4 +74,15 @@ export const webProjects = [
     footNote:
       'Self-hosted vía Docker + Kamal, expuesto por Cloudflare Tunnel — sin dominio fijo, por eso el link va al código.',
   },
+  {
+    id: 'mindkuapp',
+    tag: 'App',
+    title: 'Mindkuapp',
+    description:
+      'App de notas full stack: crear, buscar y compartir notas con link directo. Backend en Node.js + Express + TypeScript con MySQL sin ORM (SQL explícito), frontend en React + TypeScript + Vite. Construida con mi harness de 3 agentes de IA (leader, implementer, reviewer).',
+    image: null,
+    href: 'https://mindkuapp.vercel.app',
+    external: true,
+    footLabel: 'Abrir app',
+  },
 ]

@@ -9,11 +9,12 @@ export default function WebProjects() {
           <div>
             <p className="section-label mb-4">03 — DESARROLLO WEB</p>
             <h2 className="font-display text-3xl font-bold uppercase leading-tight md:text-5xl">
-              Sitios para clientes
+              Sitios y apps
             </h2>
           </div>
           <p className="max-w-sm text-sm text-muted">
-            Desarrollo full stack asistido por IA. Frontend, contenido y despliegue.
+            Desarrollo full stack asistido por IA: sitios para clientes y apps propias, de la
+            idea al despliegue.
           </p>
         </div>
 
@@ -28,6 +29,11 @@ export default function WebProjects() {
               {project.id === 'pdf-on-rails' && (
                 <span className="font-display text-4xl tracking-tight text-white">
                   <span style={{ color: '#cc0000' }}>PDF</span> on Rails
+                </span>
+              )}
+              {project.id === 'mindkuapp' && (
+                <span className="font-display text-4xl tracking-tight text-white">
+                  mindku<span className="text-cyan">app</span>
                 </span>
               )}
             </PortfolioLinkCard>

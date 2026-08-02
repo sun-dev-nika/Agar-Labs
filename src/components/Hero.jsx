@@ -7,7 +7,7 @@ export default function Hero() {
       <HeroBackdrop patternId="grid" />
 
       <div className="container-x relative flex min-h-[80vh] flex-col justify-center py-20 md:py-28">
-        <p className="section-label mb-6">VISUALS · CÓDIGO · IA</p>
+        <p className="section-label mb-6">UX/UI · CÓDIGO · IA</p>
 
         <h1 className="max-w-5xl font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
           FullStack

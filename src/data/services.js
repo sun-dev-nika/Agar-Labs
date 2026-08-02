@@ -10,7 +10,7 @@ export const services = [
       { label: 'Fullstack (Front + Back)', price: '$400.000', promo: true },
       { label: 'Migración de hosting', price: '$50.000–$600.000' },
     ],
-    tags: ['React', 'Node', 'Tailwind', '48h – 8 semanas'],
+    tags: ['React', 'Node', 'TypeScript', 'Express', 'MySQL', 'Tailwind', '48h – 8 semanas'],
   },
   {
     number: '02',
@@ -24,7 +24,7 @@ export const services = [
     title: 'Automatizaciones',
     description:
       'Conecto tus herramientas y automatizo tareas repetitivas: notificaciones, flujos de trabajo y procesos manuales que hoy haces a mano.',
-    bullets: [{ label: 'Automatización de procesos', price: '$50.000–$200.000' }],
+    bullets: [{ label: 'Automatización de procesos', price: '$50.000–$200.000', promo: true }],
     tags: ['n8n', 'IA', '1-2 semanas'],
   },
 ]
