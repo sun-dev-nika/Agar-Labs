@@ -30,12 +30,19 @@ export default function PortfolioHero() {
           que <span className="text-neon">convierte.</span>
         </h1>
 
-        <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
-          Publicista con asertividad en diseño UX/UI y visión de product engineer: no solo
-          pienso la estrategia de contenido, también diseño, desarrollo y despliego el
-          producto digital que la sostiene — apoyado en mi propio harness de 3 agentes de IA
-          (leader, implementer, reviewer) para moverme rápido sin perder calidad.
-        </p>
+        <ul className="mt-8 max-w-2xl space-y-3">
+          {[
+            'Ingeniería Full Stack',
+            'Facilidad de interactuar con clientes',
+            'Traducir problemas de negocio a requerimientos técnicos',
+            'Enfoque en soluciones, diseñar y desarrollar flujos a la medida',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3 text-lg text-muted md:text-xl">
+              <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-neon" />
+              {item}
+            </li>
+          ))}
+        </ul>
 
         <div className="mt-8 flex flex-wrap gap-2">
           <span className="rounded-full border border-border px-4 py-2 font-mono text-xs uppercase tracking-[0.2em] text-white/70">

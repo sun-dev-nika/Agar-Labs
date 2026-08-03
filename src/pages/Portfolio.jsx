@@ -11,7 +11,7 @@ import PortfolioCTA from '../components/PortfolioCTA.jsx'
 export default function Portfolio() {
   useDocumentTitle(
     'Joaquín Agar — Community Manager & Comunicador Creativo',
-    'Portafolio de Joaquín Agar: community management, contenido orgánico, desarrollo web y fotografía. Publicista UNAB / U. de los Andes, Valparaíso.',
+    'Portafolio de Joaquín Agar: community management, contenido orgánico, desarrollo web y fotografía. Publicista titulado de la Universidad Andrés Bello, Valparaíso.',
     '/portafolio'
   )
 

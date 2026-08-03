@@ -22,9 +22,8 @@ export default function AboutMe() {
 
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <p className="font-display text-2xl font-bold leading-tight md:text-4xl">
-            Publicista formado en <span className="text-neon">UNAB</span> y la{' '}
-            <span className="text-neon">U. de los Andes</span>, con mentalidad de agencia:
-            orientado a resultados y con alto sentido estético.
+            Publicista titulado de la <span className="text-neon">Universidad Andrés Bello</span>,
+            con mentalidad de agencia: orientado a resultados y con alto sentido estético.
           </p>
 
           <div>
